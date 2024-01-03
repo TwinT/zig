@@ -54,26 +54,26 @@ pub fn solve(directions: []const u8) Result {
 }
 
 test "test0-0" {
-    try expect(0 == solve("(())"));
-    try expect(0 == solve("()()"));
+    try expect(0 == solve("(())").result);
+    try expect(0 == solve("()()").result);
 }
 
 test "test3-0" {
-    try expect(3 == solve("((("));
-    try expect(3 == solve("(()(()("));
+    try expect(3 == solve("(((").result);
+    try expect(3 == solve("(()(()(").result);
 }
 
 test "test3-1" {
-    try expect(3 == solve("(()(()("));
-    try expect(3 == solve("))((((("));
+    try expect(3 == solve("(()(()(").result);
+    try expect(3 == solve("))(((((").result);
 }
 
 test "test-1-0" {
-    try expect(-1 == solve("())"));
-    try expect(-1 == solve("))("));
+    try expect(-1 == solve("())").result);
+    try expect(-1 == solve("))(").result);
 }
 
 test "test-3-0" {
-    try expect(-3 == solve(")))"));
-    try expect(-3 == solve(")())())"));
+    try expect(-3 == solve(")))").result);
+    try expect(-3 == solve(")())())").result);
 }
